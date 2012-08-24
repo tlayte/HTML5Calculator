@@ -10,7 +10,7 @@
 			<header>
 				<p>CASIO</p>
 				<div id="solar"><ul><li></li><li></li><li></li><li></li></ul></div>
-				<div id="displaypanel"><div id="display" data-bind="text: Display"></div></div>
+				<div id="displaypanel"><div id="display"></div></div>
 			</header>
 			<div class="buttons">
 				<fieldset id="numbers">
@@ -18,24 +18,24 @@
 					<button class="number red" id="clearEntry">CE</button>
 					<button class="number red" id="clear">C</button>
 				
-					<button class="number" id="n7" data-bind="click: PressNumber.bind($data, '7')">7</button>
-					<button class="number" id="n8" data-bind="click: PressNumber.bind($data, '8')">8</button>
-					<button class="number" id="n9" data-bind="click: PressNumber.bind($data, '9')">9</button>
-					<button class="number" id="n4" data-bind="click: PressNumber.bind($data, '4')">4</button>
-					<button class="number" id="n5" data-bind="click: PressNumber.bind($data, '5')">5</button>
-					<button class="number" id="n6" data-bind="click: PressNumber.bind($data, '6')">6</button>
-					<button class="number" id="n1" data-bind="click: PressNumber.bind($data, '1')">1</button>
-					<button class="number" id="n2" data-bind="click: PressNumber.bind($data, '2')">2</button>
-					<button class="number" id="n3" data-bind="click: PressNumber.bind($data, '3')">3</button>
-					<button class="number dw" id="n0" data-bind="click: PressNumber.bind($data, '0')">0</button>
+					<button class="number" id="n7">7</button>
+					<button class="number" id="n8">8</button>
+					<button class="number" id="n9">9</button>
+					<button class="number" id="n4">4</button>
+					<button class="number" id="n5">5</button>
+					<button class="number" id="n6">6</button>
+					<button class="number" id="n1">1</button>
+					<button class="number" id="n2">2</button>
+					<button class="number" id="n3">3</button>
+					<button class="number dw" id="n0">0</button>
 					<button class="number" id="np">.</button>
 				</fieldset>
 				<fieldset id="commands">
-					<button class="command" id="add" data-bind="click: PressOperator.bind($data, '+')">+</button>
-					<button class="command" id="subtract" data-bind="click: PressOperator.bind($data, '-')">-</button>
-					<button class="command" id="multiply"data-bind="click: PressOperator.bind($data, '*')">&times;</button>
-					<button class="command" id="divide" data-bind="click: PressOperator.bind($data, '/')">&divide;</button>
-					<button class="command" id="equals" data-bind="click:PressEquals">=</button>
+					<button class="command" id="add">+</button>
+					<button class="command" id="subtract">-</button>
+					<button class="command" id="multiply">&times;</button>
+					<button class="command" id="divide">&divide;</button>
+					<button class="command" id="equals">=</button>
 				</fieldset>
 				<div class="clear"></div>
 			</div>
