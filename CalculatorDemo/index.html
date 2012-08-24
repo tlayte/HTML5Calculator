@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator!</title>
+		<link rel="stylesheet" type="text/css" href="css/calc.css" />
+	</head>
+	<body>
+		<div id="floater"></div>
+		<div id="calculator" class="clearfix">
+			<header>
+				<p>CASIO</p>
+				<div id="solar"><ul><li></li><li></li><li></li><li></li></ul></div>
+				<div id="displaypanel"><div id="display" data-bind="text: Display"></div></div>
+			</header>
+			<div class="buttons">
+				<fieldset id="numbers">
+					<button class="number" id="backspace">&larr;</button>
+					<button class="number red" id="clearEntry">CE</button>
+					<button class="number red" id="clear">C</button>
+				
+					<button class="number" id="n7" data-bind="click: PressNumber.bind($data, '7')">7</button>
+					<button class="number" id="n8" data-bind="click: PressNumber.bind($data, '8')">8</button>
+					<button class="number" id="n9" data-bind="click: PressNumber.bind($data, '9')">9</button>
+					<button class="number" id="n4" data-bind="click: PressNumber.bind($data, '4')">4</button>
+					<button class="number" id="n5" data-bind="click: PressNumber.bind($data, '5')">5</button>
+					<button class="number" id="n6" data-bind="click: PressNumber.bind($data, '6')">6</button>
+					<button class="number" id="n1" data-bind="click: PressNumber.bind($data, '1')">1</button>
+					<button class="number" id="n2" data-bind="click: PressNumber.bind($data, '2')">2</button>
+					<button class="number" id="n3" data-bind="click: PressNumber.bind($data, '3')">3</button>
+					<button class="number dw" id="n0" data-bind="click: PressNumber.bind($data, '0')">0</button>
+					<button class="number" id="np">.</button>
+				</fieldset>
+				<fieldset id="commands">
+					<button class="command" id="add" data-bind="click: PressOperator.bind($data, '+')">+</button>
+					<button class="command" id="subtract" data-bind="click: PressOperator.bind($data, '-')">-</button>
+					<button class="command" id="multiply"data-bind="click: PressOperator.bind($data, '*')">&times;</button>
+					<button class="command" id="divide" data-bind="click: PressOperator.bind($data, '/')">&divide;</button>
+					<button class="command" id="equals" data-bind="click:PressEquals">=</button>
+				</fieldset>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.1.0.debug.js"></script>
+		<script src="js/calculator.js" type="text/javascript"></script>
+        <script src="js/viewModel.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$("#solar").click(function(e) {
+				$("#calculator").toggleClass("flipped");
+				return false;
+});
+
+var model = new ViewModel();
+
+ko.applyBindings(model);
+            
+		</script>
+	</body>
+</html>
